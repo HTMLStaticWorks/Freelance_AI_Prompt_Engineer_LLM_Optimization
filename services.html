@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | NeuroPrompt Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0a0a0a',
+                        graphite: '#1e1e1e',
+                        ivory: '#f5f5f0',
+                        emerald: '#2d5a4c',
+                        gold: '#c5a059',
+                        silver: '#e0e0e0',
+                        steel: '#4a4a4a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-charcoal text-silver">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
+                        <span class="text-gold font-bold text-xl">N</span>
+                    </div>
+                    <a href="index.html" class="text-2xl font-bold tracking-tight text-white">NP<span class="text-gold">Lab</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-silver hover:text-gold transition-colors">Home</a>
+                    <a href="home2.html" class="text-silver hover:text-gold transition-colors">Home 2</a>
+                    <a href="about.html" class="text-silver hover:text-gold transition-colors">About</a>
+                    <a href="services.html" class="text-gold hover:text-white transition-colors">Services</a>
+                    <a href="case-studies.html" class="text-silver hover:text-gold transition-colors">Case Studies</a>
+                    <a href="contact.html" class="text-silver hover:text-gold transition-colors">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Toggle Theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                    <a href="signup.html" class="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-white transition-all">Sign Up</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-graphite/95 backdrop-blur-lg border-b border-white/10 md:hidden p-4 space-y-4">
+            <a href="index.html" class="text-silver py-2">Home</a>
+            <a href="home2.html" class="text-silver py-2">Home 2</a>
+            <a href="about.html" class="text-silver py-2">About</a>
+            <a href="services.html" class="text-gold py-2">Services</a>
+            <a href="case-studies.html" class="text-silver py-2">Case Studies</a>
+            <a href="contact.html" class="text-silver py-2">Contact</a>
+            <hr class="border-white/10">
+            <div class="flex items-center justify-between px-2">
+                <div class="flex gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 hover:bg-white/5 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle-mobile" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <a href="signup.html" class="flex-1 text-center py-2 bg-gold text-charcoal rounded-lg font-bold">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="pt-40 pb-20 bg-graphite border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Optimization <span class="text-emerald">Services</span></h1>
+            <p class="text-xl text-silver/60 max-w-2xl mx-auto">Scalable AI engineering solutions designed for high-performance enterprise applications.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Service Cards -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-10 rounded-3xl reveal group">
+                    <div class="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center mb-6 group-hover:bg-gold group-hover:text-charcoal transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.673.337a4 4 0 01-2.586.345l-1.1-.22m7.628-2.102a2 2 0 00.758-1.11l.35-1.05a7.035 7.035 0 00.35-3.551l-.073-.733M15.428 19.428a2 2 0 01-1.11.758l-1.05.35a7.035 7.035 0 01-3.551.35l-.733-.073" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise Consulting</h3>
+                    <p class="text-silver/60 leading-relaxed mb-8">Strategic guidance on integrating LLMs into existing enterprise workflows with a focus on security, compliance, and ROI.</p>
+                    <ul class="space-y-3 text-sm text-silver/40">
+                        <li>• AI Readiness Assessment</li>
+                        <li>• Custom Model Benchmarking</li>
+                        <li>• Deployment Strategy</li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card p-10 rounded-3xl reveal group">
+                    <div class="w-12 h-12 bg-emerald/10 text-emerald rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald group-hover:text-white transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Chatbot Optimization</h3>
+                    <p class="text-silver/60 leading-relaxed mb-8">Refining customer-facing AI agents to provide human-like, accurate, and contextually aware interactions.</p>
+                    <ul class="space-y-3 text-sm text-silver/40">
+                        <li>• Personality Alignment</li>
+                        <li>• Hallucination Mitigation</li>
+                        <li>• RAG Architecture Setup</li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="glass-card p-10 rounded-3xl reveal group">
+                    <div class="w-12 h-12 bg-silver/10 text-silver rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-charcoal transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Token Efficiency</h3>
+                    <p class="text-silver/60 leading-relaxed mb-8">Drastically reducing operational costs by engineering more efficient prompts and context windows.</p>
+                    <ul class="space-y-3 text-sm text-silver/40">
+                        <li>• Prompt Compression</li>
+                        <li>• Cost-Quality Mapping</li>
+                        <li>• Automated Latency Audits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Steps -->
+    <section class="section-padding bg-graphite/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-20 text-center">Our Optimization <span class="text-gold">Protocol</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="relative p-8 glass reveal text-center">
+                    <div class="text-6xl font-bold text-white/5 absolute top-4 left-4">01</div>
+                    <h4 class="text-xl font-bold mb-2">Audit</h4>
+                    <p class="text-silver/40 text-sm">Deep analysis of current prompt performance.</p>
+                </div>
+                <div class="relative p-8 glass reveal text-center">
+                    <div class="text-6xl font-bold text-white/5 absolute top-4 left-4">02</div>
+                    <h4 class="text-xl font-bold mb-2">Design</h4>
+                    <p class="text-silver/40 text-sm">Architecting new prompt structures (CoT, ReAct).</p>
+                </div>
+                <div class="relative p-8 glass reveal text-center">
+                    <div class="text-6xl font-bold text-white/5 absolute top-4 left-4">03</div>
+                    <h4 class="text-xl font-bold mb-2">Validate</h4>
+                    <p class="text-silver/40 text-sm">Large-scale testing across 100+ scenarios.</p>
+                </div>
+                <div class="relative p-8 glass reveal text-center">
+                    <div class="text-6xl font-bold text-white/5 absolute top-4 left-4">04</div>
+                    <h4 class="text-xl font-bold mb-2">Deploy</h4>
+                    <p class="text-silver/40 text-sm">Integration into production environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="section-padding">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">Service Tiers Matrix</h2>
+            <div class="overflow-hidden rounded-3xl border border-white/10">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-graphite">
+                        <tr>
+                            <th class="p-6">Features</th>
+                            <th class="p-6 text-silver/60">Core</th>
+                            <th class="p-6 text-gold">Elite</th>
+                            <th class="p-6 text-emerald">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr>
+                            <td class="p-6 font-bold">Prompt Tuning</td>
+                            <td class="p-6">✓</td>
+                            <td class="p-6 text-gold">✓</td>
+                            <td class="p-6 text-emerald">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">Multi-Model Testing</td>
+                            <td class="p-6 text-silver/20">✕</td>
+                            <td class="p-6 text-gold">✓</td>
+                            <td class="p-6 text-emerald">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">RAG Optimization</td>
+                            <td class="p-6 text-silver/20">✕</td>
+                            <td class="p-6 text-gold">✓</td>
+                            <td class="p-6 text-emerald">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">Latency Monitoring</td>
+                            <td class="p-6 text-silver/20">✕</td>
+                            <td class="p-6 text-silver/20">✕</td>
+                            <td class="p-6 text-emerald">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">Dedicated Engineer</td>
+                            <td class="p-6 text-silver/20">✕</td>
+                            <td class="p-6 text-silver/20">✕</td>
+                            <td class="p-6 text-emerald">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal border-t border-white/10 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-silver/40 text-sm mb-10">Ready to start? <a href="contact.html" class="text-gold underline underline-offset-4">Get a free audit</a></p>
+            <div class="flex justify-center space-x-12 mb-10 text-xs uppercase tracking-widest text-silver/20">
+                <span>Finance</span>
+                <span>Healthcare</span>
+                <span>Legal</span>
+                <span>SaaS</span>
+                <span>eCommerce</span>
+            </div>
+            <a href="index.html" class="inline-block text-xs text-silver/20 hover:text-white transition-colors">&copy; 2026 NP Lab</a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

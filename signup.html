@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | NeuroPrompt Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0a0a0a',
+                        graphite: '#1e1e1e',
+                        gold: '#c5a059',
+                        emerald: '#2d5a4c',
+                        silver: '#e0e0e0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-charcoal text-silver h-screen overflow-hidden">
+
+    <div class="flex h-full">
+        <!-- Left Side: Visual -->
+        <div class="hidden lg:block w-1/2 relative overflow-hidden">
+            <img src="assets/workflow.png" alt="Engineering Visual" class="w-full h-full object-cover grayscale opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center px-20">
+                <h2 class="text-5xl font-bold mb-6 text-white">Join the Elite <br>AI Research Network</h2>
+                <p class="text-silver/60 text-lg">Gain access to proprietary prompt architectures and LLM benchmarking tools.</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-20 relative overflow-hidden">
+            <div class="w-full max-w-md relative z-10 reveal">
+                <div class="flex justify-between items-center mb-12">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <div class="w-8 h-8 bg-emerald rounded flex items-center justify-center">
+                            <span class="text-gold font-bold">N</span>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight text-white">NP Lab</span>
+                    </a>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <button id="theme-toggle" class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Toggle Theme">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                </svg>
+                            </button>
+                            <button id="rtl-toggle" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                        </div>
+                        <a href="index.html" class="text-xs text-silver/40 hover:text-white transition-colors">Back to home</a>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl font-bold mb-2">Request Access</h1>
+                <p class="text-silver/40 mb-10">Start your journey into high-fidelity AI.</p>
+
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-silver/40 uppercase mb-2">First Name</label>
+                            <input type="text" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="Alex">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-silver/40 uppercase mb-2">Last Name</label>
+                            <input type="text" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-silver/40 uppercase mb-2">Company Name</label>
+                        <input type="text" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="Quantum AI Systems">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-silver/40 uppercase mb-2">Work Email</label>
+                        <input type="email" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="alex@quantum.ai">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-silver/40 uppercase mb-2">Create Password</label>
+                        <input type="password" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="••••••••">
+                    </div>
+                    
+                    <div class="py-4">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" class="mt-1 accent-gold">
+                            <span class="text-xs text-silver/40 leading-relaxed">I agree to the <a href="#" class="text-gold">Terms of Service</a> and acknowledge that NeuroPrompt Lab will process my data for research purposes.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" onclick="window.location.href='index.html'; return false;" class="w-full bg-emerald text-white py-4 rounded-lg font-bold hover:bg-emerald/80 transition-all">Apply for Access</button>
+                </form>
+
+                <p class="mt-8 text-center text-sm text-silver/40">
+                    Already have access? <a href="login.html" class="text-gold font-bold hover:underline">Sign in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

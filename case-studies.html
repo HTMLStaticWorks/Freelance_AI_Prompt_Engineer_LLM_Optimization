@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | NeuroPrompt Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0a0a0a',
+                        graphite: '#1e1e1e',
+                        ivory: '#f5f5f0',
+                        emerald: '#2d5a4c',
+                        gold: '#c5a059',
+                        silver: '#e0e0e0',
+                        steel: '#4a4a4a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-charcoal text-silver">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
+                        <span class="text-gold font-bold text-xl">N</span>
+                    </div>
+                    <a href="index.html" class="text-2xl font-bold tracking-tight text-white">NP<span class="text-gold">Lab</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-silver hover:text-gold transition-colors">Home</a>
+                    <a href="home2.html" class="text-silver hover:text-gold transition-colors">Home 2</a>
+                    <a href="about.html" class="text-silver hover:text-gold transition-colors">About</a>
+                    <a href="services.html" class="text-silver hover:text-gold transition-colors">Services</a>
+                    <a href="case-studies.html" class="text-gold hover:text-white transition-colors">Case Studies</a>
+                    <a href="contact.html" class="text-silver hover:text-gold transition-colors">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Toggle Theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                    <a href="signup.html" class="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-white transition-all">Sign Up</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-graphite/95 backdrop-blur-lg border-b border-white/10 md:hidden p-4 space-y-4">
+            <a href="index.html" class="text-silver py-2">Home</a>
+            <a href="home2.html" class="text-silver py-2">Home 2</a>
+            <a href="about.html" class="text-silver py-2">About</a>
+            <a href="services.html" class="text-silver py-2">Services</a>
+            <a href="case-studies.html" class="text-gold py-2">Case Studies</a>
+            <a href="contact.html" class="text-silver py-2">Contact</a>
+            <hr class="border-white/10">
+            <div class="flex items-center justify-between px-2">
+                <div class="flex gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 hover:bg-white/5 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle-mobile" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <a href="signup.html" class="flex-1 text-center py-2 bg-gold text-charcoal rounded-lg font-bold">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 bg-gradient-to-r from-charcoal to-graphite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <h1 class="text-5xl font-bold mb-4">Evidence of <span class="text-gold">Impact</span></h1>
+            <p class="text-silver/60 text-xl max-w-2xl">Measurable results from our enterprise AI optimization projects.</p>
+        </div>
+    </header>
+
+    <!-- Interactive Comparison Cards -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-24">
+                <!-- Case Study 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
+                    <div>
+                        <span class="text-emerald font-bold text-sm tracking-widest uppercase mb-4 block">FinTech Sector</span>
+                        <h2 class="text-4xl font-bold mb-6">Securities Compliance Analysis Automation</h2>
+                        <p class="text-silver/60 mb-8 leading-relaxed">Automating the review of complex legal filings using a multi-agent prompt architecture. Reduced manual oversight by 85%.</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="p-4 glass rounded-xl">
+                                <div class="text-2xl font-bold text-gold">99.4%</div>
+                                <div class="text-xs text-silver/40">Audit Accuracy</div>
+                            </div>
+                            <div class="p-4 glass rounded-xl">
+                                <div class="text-2xl font-bold text-gold">-60%</div>
+                                <div class="text-xs text-silver/40">Inference Cost</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="glass p-6 rounded-2xl border-l-4 border-red-500/50">
+                            <p class="text-[10px] text-silver/40 mb-2 uppercase">Initial Output (GPT-4 Standard)</p>
+                            <p class="text-sm italic text-silver/60">"The document seems to comply with Section 12b but I am unsure about the specific reporting requirements for overseas assets..."</p>
+                            <div class="mt-4 flex items-center gap-2">
+                                <span class="text-[10px] bg-red-500/10 text-red-500 px-2 py-0.5 rounded">Hallucination Risk</span>
+                                <span class="text-[10px] bg-red-500/10 text-red-500 px-2 py-0.5 rounded">Vague</span>
+                            </div>
+                        </div>
+                        <div class="glass p-6 rounded-2xl border-l-4 border-emerald-500/50">
+                            <p class="text-[10px] text-emerald font-bold mb-2 uppercase">NeuroPrompt Optimized</p>
+                            <p class="text-sm text-silver/80 font-mono">"COMPLIANCE STATUS: FAIL. Reason: Missing Asset Disclosure under Section 12b-2. Required: Form 8-K Annex A. Verification Path: Document Line 452..."</p>
+                            <div class="mt-4 flex items-center gap-2">
+                                <span class="text-[10px] bg-emerald/10 text-emerald px-2 py-0.5 rounded">High Precision</span>
+                                <span class="text-[10px] bg-emerald/10 text-emerald px-2 py-0.5 rounded">Schema Enforced</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
+                    <div class="lg:order-2">
+                        <span class="text-gold font-bold text-sm tracking-widest uppercase mb-4 block">Medical AI</span>
+                        <h2 class="text-4xl font-bold mb-6">Patient Symptom Classification</h2>
+                        <p class="text-silver/60 mb-8 leading-relaxed">Developing a triage support system with zero-hallucination protocols. Implemented cross-verification loops to ensure clinical safety.</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="p-4 glass rounded-xl">
+                                <div class="text-2xl font-bold text-emerald">0.02%</div>
+                                <div class="text-xs text-silver/40">Error Rate</div>
+                            </div>
+                            <div class="p-4 glass rounded-xl">
+                                <div class="text-2xl font-bold text-emerald">12x</div>
+                                <div class="text-xs text-silver/40">Efficiency Multiplier</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:order-1 relative">
+                        <img src="assets/hero2.png" alt="Medical AI" class="rounded-3xl opacity-40 grayscale">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="glass p-8 max-w-sm">
+                                <h4 class="text-xl font-bold mb-4">Benchmark Data</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between text-xs mb-1">
+                                            <span>Recall</span>
+                                            <span>98%</span>
+                                        </div>
+                                        <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-emerald w-[98%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs mb-1">
+                                            <span>Precision</span>
+                                            <span>99%</span>
+                                        </div>
+                                        <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-gold w-[99%]"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Grid -->
+    <section class="section-padding bg-graphite/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-16">Results Across <span class="text-emerald">Industries</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-8 glass hover:bg-white/5 transition-colors">
+                    <h4 class="font-bold mb-2">LegalTech</h4>
+                    <p class="text-gold text-2xl font-bold">+400%</p>
+                    <p class="text-[10px] text-silver/40">Review Speed</p>
+                </div>
+                <div class="p-8 glass hover:bg-white/5 transition-colors">
+                    <h4 class="font-bold mb-2">eCommerce</h4>
+                    <p class="text-gold text-2xl font-bold">-25%</p>
+                    <p class="text-[10px] text-silver/40">Support Costs</p>
+                </div>
+                <div class="p-8 glass hover:bg-white/5 transition-colors">
+                    <h4 class="font-bold mb-2">SaaS</h4>
+                    <p class="text-gold text-2xl font-bold">+18%</p>
+                    <p class="text-[10px] text-silver/40">Churn Reduction</p>
+                </div>
+                <div class="p-8 glass hover:bg-white/5 transition-colors">
+                    <h4 class="font-bold mb-2">EduTech</h4>
+                    <p class="text-gold text-2xl font-bold">96%</p>
+                    <p class="text-[10px] text-silver/40">Student Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal border-t border-white/10 py-20 text-center">
+        <h2 class="text-4xl font-bold mb-8">Have a Complex Challenge?</h2>
+        <a href="contact.html" class="px-10 py-5 bg-gold text-charcoal rounded-full font-bold hover:scale-105 transition-transform inline-block">Consult Our Engineers</a>
+        <p class="mt-12 text-silver/20 text-xs tracking-tighter">NeuroPrompt Lab &copy; 2026. All data verified by 3rd party audits.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

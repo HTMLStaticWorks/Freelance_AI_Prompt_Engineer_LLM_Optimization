@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | NeuroPrompt Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0a0a0a',
+                        graphite: '#1e1e1e',
+                        ivory: '#f5f5f0',
+                        emerald: '#2d5a4c',
+                        gold: '#c5a059',
+                        silver: '#e0e0e0',
+                        steel: '#4a4a4a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-charcoal text-silver">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
+                        <span class="text-gold font-bold text-xl">N</span>
+                    </div>
+                    <a href="index.html" class="text-2xl font-bold tracking-tight text-white">NP<span class="text-gold">Lab</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-silver hover:text-gold transition-colors">Home</a>
+                    <a href="home2.html" class="text-silver hover:text-gold transition-colors">Home 2</a>
+                    <a href="about.html" class="text-gold hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-silver hover:text-gold transition-colors">Services</a>
+                    <a href="case-studies.html" class="text-silver hover:text-gold transition-colors">Case Studies</a>
+                    <a href="contact.html" class="text-silver hover:text-gold transition-colors">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Toggle Theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                    <a href="signup.html" class="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-white transition-all">Sign Up</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden flex-col bg-graphite/95 backdrop-blur-lg border-b border-white/10 md:hidden p-4 space-y-4">
+            <a href="index.html" class="text-silver py-2">Home</a>
+            <a href="home2.html" class="text-silver py-2">Home 2</a>
+            <a href="about.html" class="text-gold py-2">About</a>
+            <a href="services.html" class="text-silver py-2">Services</a>
+            <a href="case-studies.html" class="text-silver py-2">Case Studies</a>
+            <a href="contact.html" class="text-silver py-2">Contact</a>
+            <hr class="border-white/10">
+            <div class="flex items-center justify-between px-2">
+                <div class="flex gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 hover:bg-white/5 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle-mobile" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <a href="signup.html" class="flex-1 text-center py-2 bg-gold text-charcoal rounded-lg font-bold">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[70vh] flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero1.png" alt="Genesis Hero" class="w-full h-full object-cover opacity-30 saturate-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto reveal">
+                <span class="inline-block px-4 py-1 rounded-full border border-emerald/30 bg-emerald/10 text-emerald text-sm font-medium mb-6 uppercase tracking-widest">Our Genesis</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-white">
+                    Bridging Intent and <span class="text-gradient">Intelligence</span>
+                </h1>
+                <p class="text-xl text-silver/80 mb-10 leading-relaxed mx-auto max-w-2xl">
+                    NeuroPrompt Lab was founded on the principle that the most powerful component of AI is the bridge between human intention and machine comprehension.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Story Section -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold mb-8">The AI Research Journey</h2>
+                    <p class="text-silver/60 mb-6 leading-relaxed">Starting as a research initiative exploring the attention mechanisms of early transformer models, NeuroPrompt Lab evolved into a full-scale optimization studio. We believe that 'Prompting' is not just text—it is engineering at the intersection of linguistics and mathematics.</p>
+                    <p class="text-silver/60 leading-relaxed">Today, we help global enterprises navigate the complexities of LLM deployment, ensuring their AI solutions are safe, accurate, and cost-effective.</p>
+                </div>
+                <div class="relative reveal">
+                    <div class="aspect-square glass rounded-3xl overflow-hidden">
+                        <img src="assets/workflow.png" alt="Lab Research" class="w-full h-full object-cover opacity-60 hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-emerald/20 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section-padding bg-graphite/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-20 text-center">Milestones of <span class="text-gold">Intelligence</span></h2>
+            <div class="relative border-l border-white/10 ml-4 space-y-12">
+                <div class="relative pl-12 reveal">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gold rounded-full shadow-[0_0_10px_#c5a059]"></div>
+                    <span class="text-gold font-bold text-sm uppercase tracking-widest">2023 Q1</span>
+                    <h3 class="text-xl font-bold text-white mt-2">Foundational Research</h3>
+                    <p class="text-silver/40 text-sm mt-2">Exploration of Chain-of-Thought prompting for complex mathematical reasoning in LLMs.</p>
+                </div>
+                <div class="relative pl-12 reveal">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-emerald rounded-full"></div>
+                    <span class="text-emerald font-bold text-sm uppercase tracking-widest">2024 Q2</span>
+                    <h3 class="text-xl font-bold text-white mt-2">Enterprise Scaling</h3>
+                    <p class="text-silver/40 text-sm mt-2">Deployment of automated prompt testing frameworks for three Fortune 500 tech companies.</p>
+                </div>
+                <div class="relative pl-12 reveal">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-silver rounded-full"></div>
+                    <span class="text-silver font-bold text-sm uppercase tracking-widest">2025 Q4</span>
+                    <h3 class="text-xl font-bold text-white mt-2">NeuroPrompt V2</h3>
+                    <p class="text-silver/40 text-sm mt-2">Launch of the proprietary LLM Benchmarking Dashboard and RAG optimization suite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-16 text-center">Our <span class="text-emerald">Technological Stack</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 reveal">
+                <div class="glass p-6 text-center hover:border-gold/50 transition-colors">
+                    <div class="font-bold text-white">GPT-4o</div>
+                    <div class="text-[10px] text-silver/40 mt-1">Multi-modal</div>
+                </div>
+                <div class="glass p-6 text-center hover:border-gold/50 transition-colors">
+                    <div class="font-bold text-white">Claude 3.5</div>
+                    <div class="text-[10px] text-silver/40 mt-1">Reasoning</div>
+                </div>
+                <div class="glass p-6 text-center hover:border-gold/50 transition-colors">
+                    <div class="font-bold text-white">Llama 3</div>
+                    <div class="text-[10px] text-silver/40 mt-1">OSS Excellence</div>
+                </div>
+                <div class="glass p-6 text-center hover:border-gold/50 transition-colors">
+                    <div class="font-bold text-white">LangChain</div>
+                    <div class="text-[10px] text-silver/40 mt-1">Orchestration</div>
+                </div>
+                <div class="glass p-6 text-center hover:border-gold/50 transition-colors">
+                    <div class="font-bold text-white">Pinecone</div>
+                    <div class="text-[10px] text-silver/40 mt-1">Vector Search</div>
+                </div>
+                <div class="glass p-6 text-center hover:border-gold/50 transition-colors">
+                    <div class="font-bold text-white">Python</div>
+                    <div class="text-[10px] text-silver/40 mt-1">Core Logic</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section-padding bg-emerald/5 border-y border-emerald/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center reveal">
+                <div>
+                    <div class="text-5xl font-bold text-gold mb-4">12M+</div>
+                    <p class="text-silver/60">Tokens Optimized Daily</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold text-gold mb-4">45+</div>
+                    <p class="text-silver/60">Enterprise LLM Clusters</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold text-gold mb-4">99.9%</div>
+                    <p class="text-silver/60">Uptime on Production Prompts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+        <!-- Subtle background glow -->
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald/5 rounded-full blur-[100px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
+                            <span class="text-gold font-bold text-xl">N</span>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-white">NP Lab</span>
+                    </a>
+                    <p class="text-silver/40 text-sm leading-relaxed max-w-xs">
+                        Architecting the next generation of enterprise intelligence through scientific prompt engineering and multi-agent systems.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all">𝕏</a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all">in</a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all">gh</a>
+                    </div>
+                </div>
+
+                <!-- Platform -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Platform</h4>
+                    <ul class="space-y-4 text-sm text-silver/60">
+                        <li><a href="index.html" class="hover:text-gold transition-colors">Neural Home</a></li>
+                        <li><a href="home2.html" class="hover:text-gold transition-colors">Enterprise Home</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition-colors">Core Services</a></li>
+                        <li><a href="case-studies.html" class="hover:text-gold transition-colors">Impact Studies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Laboratory -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Laboratory</h4>
+                    <ul class="space-y-4 text-sm text-silver/60">
+                        <li><a href="about.html" class="hover:text-gold transition-colors">Our Genesis</a></li>
+                        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact Engineers</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Research Papers</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Protocol Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Protocol Updates</h4>
+                    <p class="text-silver/40 text-xs mb-6">Receive monthly updates on latent space research and optimization techniques.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="agent@enterprise.ai" class="w-full bg-graphite border border-white/10 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-gold/50 transition-colors">
+                        <button class="w-full bg-gold text-charcoal py-3 rounded-lg font-bold hover:bg-white transition-all text-sm">Join the Protocol</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-silver/20 tracking-widest uppercase">
+                    &copy; 2026 NeuroPrompt Lab. All rights reserved. Precision Guaranteed.
+                </p>
+                <div class="flex gap-8 text-[10px] text-silver/40 font-bold uppercase tracking-widest">
+                    <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-gold transition-colors">Security Protocol</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
