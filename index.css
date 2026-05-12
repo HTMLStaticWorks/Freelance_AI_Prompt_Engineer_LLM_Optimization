@@ -123,79 +123,136 @@ body {
 
 /* Utility */
 .section-padding {
-    padding: 100px 0;
+    padding: 160px 0;
 }
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 60px 0;
+        padding: 100px 0;
     }
 }
+
+/* Theme-Aware Utilities */
+.bg-charcoal { background-color: var(--charcoal); }
+.bg-graphite { background-color: var(--graphite); }
+.bg-ivory { background-color: var(--ivory); }
+.text-silver { color: var(--silver); }
+.text-charcoal { color: var(--charcoal); }
 
 /* Light Theme Overrides */
 .light-theme {
     --charcoal: #ffffff;
-    --graphite: #f0f0f0;
-    --ivory: #1a1a1a;
-    --emerald: #1e3a32;
-    --gold: #b38b45;
-    --silver: #333333;
-    --glass: rgba(240, 240, 240, 0.8);
-    --glass-border: rgba(0, 0, 0, 0.1);
+    --graphite: #f8fafc; /* Crisp, cool off-white instead of dull gray */
+    --ivory: #0a0a0a;
+    --emerald: #115e59; /* More vibrant emerald for light mode */
+    --gold: #b48600; /* Punchier, more vibrant gold */
+    --silver: #1e293b; /* Darker, crisper text color */
+    --glass: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(0, 0, 0, 0.05);
 }
 
 .light-theme .nav-blur {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .light-theme .glass-card {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #ffffff; /* Pure white cards look brighter */
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .light-theme .glass-card:hover {
-    background: rgba(0, 0, 0, 0.04);
+    background: #ffffff;
+    border-color: var(--gold);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
 }
 
 .light-theme .text-white,
-.light-theme .text-silver {
+.light-theme h1, 
+.light-theme h2, 
+.light-theme h3, 
+.light-theme h4 {
     color: #1a1a1a !important;
 }
 
-.light-theme .text-silver/80,
-.light-theme .text-silver/60 {
+/* Ensure Button Text remains White on dark buttons in light mode ONLY if it has text-white */
+.light-theme .bg-emerald.text-white,
+.light-theme .bg-gold.text-white,
+.light-theme a.bg-emerald.text-white,
+.light-theme a.bg-gold.text-white,
+.light-theme button.bg-emerald.text-white,
+.light-theme button.bg-gold.text-white {
+    color: #ffffff !important;
+}
+
+.light-theme .text-silver,
+.light-theme p {
+    color: #4a4a4a !important;
+}
+
+.light-theme .text-silver\/80,
+.light-theme .text-silver\/60,
+.light-theme .text-white\/80,
+.light-theme .text-white\/60 {
     color: rgba(0, 0, 0, 0.7) !important;
 }
 
-.light-theme .text-silver/40,
-.light-theme .text-silver/20 {
-    color: rgba(0, 0, 0, 0.4) !important;
+.light-theme .text-silver\/40,
+.light-theme .text-silver\/20,
+.light-theme .text-white\/40,
+.light-theme .text-white\/20,
+.light-theme .text-white\/10 {
+    color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.light-theme svg {
-    stroke: #1a1a1a;
+/* Force Light Backgrounds */
+.light-theme section,
+.light-theme header,
+.light-theme footer,
+.light-theme .bg-charcoal,
+.light-theme .bg-graphite {
+    background-color: var(--charcoal) !important;
 }
 
-.light-theme #theme-toggle svg,
-.light-theme #menu-btn svg {
-    stroke: #1a1a1a;
+.light-theme .bg-graphite\/10,
+.light-theme .bg-graphite\/20,
+.light-theme .bg-graphite\/30,
+.light-theme .bg-graphite\/50 {
+    background-color: #f8fafc !important; /* Tailwind slate-50, much cleaner than f0f0f0 */
+    border-color: rgba(0,0,0,0.03) !important;
 }
 
-.light-theme .bg-graphite/30,
-.light-theme .bg-graphite/20,
-.light-theme .bg-graphite/10 {
-    background-color: rgba(0, 0, 0, 0.03) !important;
+.light-theme .border-t,
+.light-theme .border-b,
+.light-theme .border-y {
+    border-color: rgba(0, 0, 0, 0.05) !important;
 }
 
-.light-theme .border-white/10,
-.light-theme .border-white/5,
-.light-theme .border-white/20 {
+/* Hero Overlay Adjustments */
+.light-theme .absolute.inset-0.z-0 img {
+    filter: brightness(1.2) grayscale(0.2);
+    opacity: 0.35 !important;
+}
+
+.light-theme .absolute.inset-0.bg-gradient-to-t {
+    background: linear-gradient(to top, #ffffff 10%, rgba(255, 255, 255, 0.6) 60%, transparent) !important;
+}
+
+.light-theme .absolute.inset-0.bg-gradient-to-b {
+    background: linear-gradient(to bottom, #ffffff 10%, rgba(255, 255, 255, 0.6) 60%, transparent) !important;
+}
+
+.light-theme .border-white\/10,
+.light-theme .border-white\/5,
+.light-theme .border-white\/20 {
     border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-.light-theme .bg-white/5,
-.light-theme .bg-white/10 {
+.light-theme .bg-white\/5,
+.light-theme .bg-white\/10 {
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
@@ -205,18 +262,43 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.light-theme body {
-    background-color: #ffffff;
-    color: #1a1a1a;
+.light-theme body,
+body.light-theme {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
 }
 
 .light-theme .glass {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     border-color: rgba(0, 0, 0, 0.1);
 }
 
 .light-theme #mobile-menu {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     border-color: rgba(0, 0, 0, 0.1);
 }
+
+.light-theme #theme-toggle,
+.light-theme #rtl-toggle,
+.light-theme #menu-btn,
+.light-theme #theme-toggle-mobile,
+.light-theme #rtl-toggle-mobile {
+    color: #1a1a1a !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.light-theme svg {
+    stroke: currentColor;
+}
+
+.light-theme #theme-toggle svg,
+.light-theme #menu-btn svg,
+.light-theme #theme-toggle-mobile svg {
+    stroke: #1a1a1a !important;
+}
+
+.light-theme .glow-border::after {
+    background: linear-gradient(45deg, transparent, var(--gold), transparent);
+}
+
 

@@ -6,6 +6,7 @@
     <title>Login | NeuroPrompt Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232d5a4c'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='sans-serif' font-weight='bold' fill='%23c5a059'>N</text></svg>">
     <script>
         tailwind.config = {
             theme: {
@@ -22,35 +23,37 @@
         }
     </script>
 </head>
-<body class="bg-charcoal text-silver h-screen overflow-hidden">
+<body class="bg-charcoal text-silver min-h-screen">
 
-    <div class="flex h-full">
-        <!-- Left Side: Form -->
-        <div class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-20 relative overflow-hidden">
-            <!-- Animated Background -->
-            <div class="absolute -top-40 -left-40 w-96 h-96 bg-gold/5 rounded-full blur-[100px] animate-pulse"></div>
-            <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald/5 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s"></div>
+    <!-- Global Utilities (Outside) -->
+    <div class="fixed top-8 right-8 z-50 flex items-center gap-3">
+        <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center border border-white/10 rounded-lg hover:bg-white/5 transition-colors" title="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+        <button id="rtl-toggle" class="h-9 px-3 text-[10px] font-bold border border-white/10 rounded-lg hover:bg-white/5 transition-colors uppercase tracking-widest">RTL</button>
+    </div>
 
-            <div class="w-full max-w-md relative z-10 reveal">
-                <div class="flex items-center justify-between mb-12">
-                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                        <div class="w-8 h-8 bg-emerald rounded flex items-center justify-center">
-                            <span class="text-gold font-bold">N</span>
+    <div class="min-h-screen flex items-center justify-center p-8 relative overflow-hidden">
+        <!-- Animated Background Glows -->
+        <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-emerald/5 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+        
+        <div class="w-full max-w-md relative z-10 reveal">
+            <div class="glass p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl">
+                <!-- Centered Logo inside Box -->
+                <div class="flex justify-center mb-12">
+                    <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <div class="w-12 h-12 bg-emerald rounded-xl flex items-center justify-center border border-white/10 shadow-lg shadow-emerald/20">
+                            <span class="text-gold font-bold text-2xl">N</span>
                         </div>
-                        <span class="text-xl font-bold tracking-tight text-white">NP Lab</span>
+                        <span class="text-3xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
                     </a>
-                    <div class="flex items-center gap-2">
-                        <button id="theme-toggle" class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Toggle Theme">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                            </svg>
-                        </button>
-                        <button id="rtl-toggle" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
-                    </div>
                 </div>
 
-                <h1 class="text-4xl font-bold mb-2">Welcome Back</h1>
-                <p class="text-silver/40 mb-10">Access your LLM optimization dashboard.</p>
+                <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
+                <p class="text-silver/40 mb-10 text-sm">Access your intelligence dashboard.</p>
 
                 <form class="space-y-6">
                     <div>
@@ -68,19 +71,28 @@
                         <input type="checkbox" id="remember" class="accent-gold">
                         <label for="remember" class="text-sm text-silver/60">Keep me authenticated</label>
                     </div>
-                    <button type="submit" onclick="window.location.href='index.html'; return false;" class="w-full bg-white text-charcoal py-4 rounded-lg font-bold hover:bg-gold transition-all">Sign In</button>
+                    <button type="submit" onclick="window.location.href='index.html'; return false;" class="w-full bg-white text-charcoal py-4 rounded-lg font-bold hover:bg-gold transition-all">Login</button>
                     
                     <div class="relative py-4">
                         <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/5"></div></div>
-                        <div class="relative flex justify-center text-xs uppercase"><span class="bg-charcoal px-2 text-silver/20">or continue with</span></div>
+                        <div class="relative flex justify-center text-xs uppercase"><span class="bg-charcoal/0 px-2 text-silver/20">or</span></div>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <button type="button" class="flex items-center justify-center gap-2 border border-white/10 rounded-lg py-3 hover:bg-white/5 transition-colors">
-                            <span class="text-sm">Google</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.28 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.67-.35-1.39-.35-2.09s.13-1.42.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>
+                            <span class="text-sm font-medium">Google</span>
                         </button>
                         <button type="button" class="flex items-center justify-center gap-2 border border-white/10 rounded-lg py-3 hover:bg-white/5 transition-colors">
-                            <span class="text-sm">GitHub</span>
+                            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                                <path d="M17.05 20.28c-.96.95-2.44 1.78-3.99 1.77-1.53-.02-2.46-.73-3.69-.73-1.23 0-2.3.73-3.71.76-1.55.03-3.15-.9-4.22-2.06-2.25-2.45-3.02-7.14-1.2-10.29 1.04-1.81 2.92-2.95 4.79-2.95 1.4 0 2.5.81 3.51.81 1.02 0 2.37-.92 4.07-.92 1.6 0 3.2.73 4.25 2.06-3.58 2.11-2.96 6.94 1.12 8.52-.7 1.73-1.88 3.5-2.93 5zM12.03 5.4c-.02-2.61 2.25-4.78 4.67-4.4 0 0 .3 2.86-2.25 5.16-1.12 1.02-2.4 1.83-2.42-0.76z"/>
+                            </svg>
+                            <span class="text-sm font-medium">Apple</span>
                         </button>
                     </div>
                 </form>
@@ -88,18 +100,6 @@
                 <p class="mt-10 text-center text-sm text-silver/40">
                     New to the lab? <a href="signup.html" class="text-gold font-bold hover:underline">Request access</a>
                 </p>
-            </div>
-        </div>
-
-        <!-- Right Side: Visual -->
-        <div class="hidden lg:block w-1/2 relative overflow-hidden">
-            <img src="assets/dashboard_preview.png" alt="Dashboard Preview" class="w-full h-full object-cover grayscale opacity-60 contrast-125">
-            <div class="absolute inset-0 bg-gradient-to-l from-charcoal via-transparent to-charcoal"></div>
-            <div class="absolute bottom-20 left-20 max-w-sm">
-                <div class="glass p-8">
-                    <p class="text-xl font-medium text-white italic mb-4">"The precision of NeuroPrompt has fundamentally changed how we deploy AI at scale."</p>
-                    <p class="text-sm font-bold text-gold">— CTO, Quantum Nexus</p>
-                </div>
             </div>
         </div>
     </div>

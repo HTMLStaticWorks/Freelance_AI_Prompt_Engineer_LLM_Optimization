@@ -7,6 +7,7 @@
     <meta name="description" content="Premium AI prompt engineering and LLM optimization studio. We enhance AI response quality, reduce hallucinations, and optimize token usage for enterprise AI.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232d5a4c'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='sans-serif' font-weight='bold' fill='%23c5a059'>N</text></svg>">
     <script>
         tailwind.config = {
             theme: {
@@ -39,7 +40,7 @@
                         <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
                             <span class="text-gold font-bold text-xl">N</span>
                         </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">NP Lab</span>
+                        <span class="text-2xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
                     </a>
                 </div>
                 
@@ -53,12 +54,12 @@
                 </div>
 
                 <div class="hidden lg:flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Toggle Theme">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center border border-white/10 rounded-lg hover:bg-white/5 transition-colors" title="Toggle Theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                     </button>
-                    <button id="rtl-toggle" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                    <button id="rtl-toggle" class="h-9 px-3 text-[10px] font-bold border border-white/10 rounded-lg hover:bg-white/5 transition-colors uppercase tracking-widest">RTL</button>
                     <a href="signup.html" class="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-white transition-all">Sign Up</a>
                 </div>
 
@@ -83,12 +84,12 @@
             <hr class="border-white/10">
             <div class="flex items-center justify-between px-2">
                 <div class="flex gap-4">
-                    <button id="theme-toggle-mobile" class="p-2 hover:bg-white/5 rounded-full transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="theme-toggle-mobile" class="w-9 h-9 flex items-center justify-center border border-white/10 rounded-lg hover:bg-white/5 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                     </button>
-                    <button id="rtl-toggle-mobile" class="text-xs font-bold px-2 py-1 border border-white/20 rounded hover:bg-white/5 transition-colors">RTL</button>
+                    <button id="rtl-toggle-mobile" class="h-9 px-3 text-[10px] font-bold border border-white/10 rounded-lg hover:bg-white/5 transition-colors uppercase tracking-widest">RTL</button>
                 </div>
             </div>
             <div class="flex gap-4">
@@ -98,9 +99,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <header class="relative min-h-screen flex items-center justify-center pt-40 pb-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/hero1.png" alt="AI Research Hero" class="w-full h-full object-cover opacity-40">
+            <img src="assets/home_hero_bg_new.png" alt="AI Research Hero" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent"></div>
         </div>
         
@@ -114,8 +115,8 @@
                     NeuroPrompt Lab specializes in enterprise-grade LLM optimization. We bridge the gap between human intent and machine execution through scientific prompt architectures.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="services.html" class="px-8 py-4 bg-emerald text-white rounded-lg font-bold hover:bg-emerald/80 transition-all text-center">Explore Services</a>
-                    <a href="contact.html" class="px-8 py-4 glass text-white rounded-lg font-bold hover:bg-white/10 transition-all text-center">Book a Consultation</a>
+                    <a href="services.html" class="px-8 py-4 bg-emerald text-white rounded-lg font-bold hover:bg-emerald/90 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald/30 transition-all text-center duration-300">Explore Services</a>
+                    <a href="contact.html" class="px-8 py-4 glass text-white rounded-lg font-bold hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 hover:shadow-xl transition-all text-center duration-300">Book a Consultation</a>
                 </div>
             </div>
         </div>
@@ -259,6 +260,77 @@
         </div>
     </section>
 
+    <!-- Multi-Agent Orchestration -->
+    <section class="section-padding relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Beyond Simple Prompts: <br><span class="text-gold">Agentic Swarms</span></h2>
+                    <p class="text-lg text-silver/60 mb-8 leading-relaxed">
+                        We don't just write instructions; we architect autonomous multi-agent systems. Our swarms decompose complex enterprise tasks into specialized sub-routines, ensuring higher accuracy and lower latency.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-xs mt-1">✓</span>
+                            <span>Task Decomposition & Routing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-xs mt-1">✓</span>
+                            <span>Self-Correction & Reflection Loops</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-xs mt-1">✓</span>
+                            <span>Cross-Model Collaboration Protocols</span>
+                        </li>
+                    </ul>
+                    <a href="services.html" class="text-gold font-bold flex items-center gap-2 group">
+                        View Agentic Solutions
+                        <span class="transform group-hover:translate-x-2 transition-transform">→</span>
+                    </a>
+                </div>
+                <div class="flex-1 relative reveal">
+                    <div class="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald/10 to-transparent"></div>
+                        <img src="assets/workflow.png" alt="Agent Workflow" class="w-full h-full object-cover rounded-2xl opacity-80 mix-blend-screen">
+                    </div>
+                    <!-- Decorative floating card -->
+                    <div class="absolute -bottom-10 -left-10 glass p-6 rounded-2xl border border-gold/20 animate-bounce-slow hidden md:block">
+                        <p class="text-[10px] uppercase tracking-widest text-gold mb-2 font-bold">System Latency</p>
+                        <div class="text-2xl font-bold">-140ms</div>
+                        <div class="text-[10px] text-emerald">+32% Speed boost</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laboratory Insight (Technical Cards) -->
+    <section class="section-padding bg-graphite/20 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-16">The Science of <span class="text-gradient">Optimization</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="glass p-10 hover:border-gold/30 transition-all reveal">
+                    <div class="text-xs text-gold font-bold uppercase tracking-[0.2em] mb-6">Phase 01</div>
+                    <h4 class="text-xl font-bold mb-4">Semantic Drift Analysis</h4>
+                    <p class="text-sm text-silver/40 leading-relaxed mb-8">We utilize proprietary vector analysis to detect and minimize semantic drift in model outputs across large-scale deployments.</p>
+                    <div class="h-[1px] w-full bg-white/10"></div>
+                </div>
+                <div class="glass p-10 hover:border-gold/30 transition-all reveal" style="transition-delay: 100ms">
+                    <div class="text-xs text-gold font-bold uppercase tracking-[0.2em] mb-6">Phase 02</div>
+                    <h4 class="text-xl font-bold mb-4">Token Efficiency Tuning</h4>
+                    <p class="text-sm text-silver/40 leading-relaxed mb-8">Reducing token overhead by up to 40% while preserving (or enhancing) the logical integrity of the prompt architecture.</p>
+                    <div class="h-[1px] w-full bg-white/10"></div>
+                </div>
+                <div class="glass p-10 hover:border-gold/30 transition-all reveal" style="transition-delay: 200ms">
+                    <div class="text-xs text-gold font-bold uppercase tracking-[0.2em] mb-6">Phase 03</div>
+                    <h4 class="text-xl font-bold mb-4">Chain-of-Thought Prototyping</h4>
+                    <p class="text-sm text-silver/40 leading-relaxed mb-8">Implementing high-fidelity CoT and ToT protocols to solve complex reasoning problems with near-perfect accuracy.</p>
+                    <div class="h-[1px] w-full bg-white/10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="section-padding bg-graphite/10">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -291,7 +363,7 @@
     </section>
 
     <!-- Standardized Premium Footer -->
-    <footer class="bg-charcoal border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+    <footer class="bg-charcoal border-t border-white/10 pt-32 pb-16 relative overflow-hidden">
         <!-- Subtle background glow -->
         <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald/5 rounded-full blur-[100px]"></div>
         
@@ -303,15 +375,27 @@
                         <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
                             <span class="text-gold font-bold text-xl">N</span>
                         </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">NP Lab</span>
+                        <span class="text-2xl font-bold tracking-tight text-white">NP<span class="text-gold">Lab</span></span>
                     </a>
                     <p class="text-silver/40 text-sm leading-relaxed max-w-xs">
                         Architecting the next generation of enterprise intelligence through scientific prompt engineering and multi-agent systems.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all">𝕏</a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all">in</a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all">gh</a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/20 transition-all duration-300" title="X (Twitter)">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/20 transition-all duration-300" title="LinkedIn">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.205 24 24 23.227 24 22.271V1.729C24 .774 23.205 0 22.225 0z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/20 transition-all duration-300" title="GitHub">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
@@ -360,6 +444,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 bg-emerald text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 shadow-lg shadow-emerald/30 hover:scale-110 hover:-translate-y-1 hover:bg-gold hover:text-charcoal hover:shadow-gold/30" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
     <script src="main.js"></script>
 </body>
