@@ -39,7 +39,7 @@
                         <span class="text-2xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
                     </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8">
                     <a href="index.html" class="text-silver hover:text-gold transition-colors">Home</a>
                     <a href="home2.html" class="text-silver hover:text-gold transition-colors">Home 2</a>
                     <a href="about.html" class="text-silver hover:text-gold transition-colors">About</a>
@@ -56,36 +56,39 @@
                     <button id="rtl-toggle" class="h-9 px-3 text-[10px] font-bold border border-white/10 rounded-lg hover:bg-white/5 transition-colors uppercase tracking-widest">RTL</button>
                     <a href="signup.html" class="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-white transition-all">Sign Up</a>
                 </div>
-                <div class="md:hidden">
-                    <button id="menu-btn" class="p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <div class="lg:hidden">
+                    <button id="menu-btn" class="p-2 text-silver hover:text-gold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden flex-col bg-graphite/95 backdrop-blur-lg border-b border-white/10 md:hidden p-4 space-y-4">
-            <a href="index.html" class="text-silver py-2">Home</a>
-            <a href="home2.html" class="text-silver py-2">Home 2</a>
-            <a href="about.html" class="text-silver py-2">About</a>
-            <a href="services.html" class="text-silver py-2">Services</a>
-            <a href="case-studies.html" class="text-gold py-2">Case Studies</a>
-            <a href="contact.html" class="text-silver py-2">Contact</a>
-            <hr class="border-white/10">
-            <div class="flex items-center justify-between px-2">
-                <div class="flex gap-4">
-                    <button id="theme-toggle-mobile" class="w-9 h-9 flex items-center justify-center border border-white/10 rounded-lg hover:bg-white/5 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
-                    </button>
-                    <button id="rtl-toggle-mobile" class="h-9 px-3 text-[10px] font-bold border border-white/10 rounded-lg hover:bg-white/5 transition-colors uppercase tracking-widest">RTL</button>
-                </div>
+        <div id="mobile-menu" class="hidden flex-col bg-graphite/98 backdrop-blur-xl border-b border-white/10 lg:hidden p-8 space-y-8 absolute top-20 left-0 w-full shadow-2xl z-40">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-3xl font-bold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Home</a>
+                <a href="home2.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Home 2</a>
+                <a href="about.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">About</a>
+                <a href="services.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Services</a>
+                <a href="case-studies.html" class="text-2xl font-semibold text-gold hover:text-white transition-colors border-b border-white/5 pb-4">Case Studies</a>
+                <a href="contact.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Contact</a>
             </div>
-            <div class="flex gap-4">
-                <a href="signup.html" class="flex-1 text-center py-2 bg-gold text-charcoal rounded-lg font-bold">Sign Up</a>
+            
+            <div class="pt-4">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-xs uppercase tracking-[0.2em] text-silver/40 font-bold">Preferences</span>
+                    <div class="flex gap-4">
+                        <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-xl hover:bg-white/5 transition-all active:scale-95" title="Toggle Theme">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                        <button id="rtl-toggle-mobile" class="h-12 px-6 text-xs font-bold border border-white/10 rounded-xl hover:bg-white/5 transition-all active:scale-95 uppercase tracking-widest">RTL</button>
+                    </div>
+                </div>
+                <a href="signup.html" class="block w-full text-center py-5 bg-gold text-charcoal rounded-xl font-bold text-xl hover:bg-white hover:shadow-xl hover:shadow-gold/20 transition-all active:scale-95">Get Started</a>
             </div>
         </div>
     </nav>
@@ -259,7 +262,7 @@
                 </div>
                 <div class="flex-1 reveal relative">
                     <div class="p-8 border border-white/5 rounded-3xl bg-white/[0.01] backdrop-blur-sm">
-                        <img src="assets/ai_workflow.png" alt="Data Flow" class="w-full opacity-40 mix-blend-screen rounded-xl">
+                        <img src="assets/workflow.png" alt="Data Flow" class="w-full opacity-40 mix-blend-screen rounded-xl">
                         <div class="mt-8 grid grid-cols-3 gap-4 text-center">
                             <div>
                                 <div class="text-gold font-bold">99.2%</div>
@@ -317,7 +320,7 @@
                         <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
                             <span class="text-gold font-bold text-xl">N</span>
                         </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">NP<span class="text-gold">Lab</span></span>
+                        <span class="text-2xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
                     </a>
                     <p class="text-silver/40 text-sm leading-relaxed max-w-xs">
                         Architecting the next generation of enterprise intelligence through scientific prompt engineering and multi-agent systems.

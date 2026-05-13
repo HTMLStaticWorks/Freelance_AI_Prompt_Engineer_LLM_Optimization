@@ -26,7 +26,7 @@
 <body class="bg-charcoal text-silver min-h-screen">
 
     <!-- Global Utilities (Outside) -->
-    <div class="fixed top-8 right-8 z-50 flex items-center gap-3">
+    <div class="fixed top-4 right-4 md:top-8 md:right-8 z-50 flex items-center gap-3">
         <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center border border-white/10 rounded-lg hover:bg-white/5 transition-colors" title="Toggle Theme">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
@@ -45,15 +45,15 @@
                 <!-- Centered Logo inside Box -->
                 <div class="flex justify-center mb-12">
                     <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                        <div class="w-12 h-12 bg-emerald rounded-xl flex items-center justify-center border border-white/10 shadow-lg shadow-emerald/20">
-                            <span class="text-gold font-bold text-2xl">N</span>
+                        <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10 shadow-lg shadow-emerald/20">
+                            <span class="text-gold font-bold text-xl">N</span>
                         </div>
-                        <span class="text-3xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
+                        <span class="text-2xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
                     </a>
                 </div>
 
-                <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
-                <p class="text-silver/40 mb-10 text-sm">Access your intelligence dashboard.</p>
+                <h1 class="text-3xl font-bold mb-2 text-center">Welcome Back</h1>
+                <p class="text-silver/40 mb-10 text-sm text-center">Access your intelligence dashboard.</p>
 
                 <form class="space-y-6">
                     <div>
@@ -61,15 +61,23 @@
                         <input type="email" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="name@company.ai">
                     </div>
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <label class="block text-xs font-bold text-silver/40 uppercase">Password</label>
-                            <a href="#" class="text-xs text-gold hover:underline">Forgot?</a>
+                        <label class="block text-xs font-bold text-silver/40 uppercase mb-2">Password</label>
+                        <div class="relative group/pass">
+                            <input type="password" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 pr-12 focus:outline-none focus:border-gold/50 transition-colors" placeholder="••••••••">
+                            <button type="button" class="password-toggle absolute right-4 top-1/2 -translate-y-1/2 text-silver/20 hover:text-gold transition-colors" aria-label="Toggle password visibility">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </button>
                         </div>
-                        <input type="password" class="w-full bg-graphite/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-gold/50 transition-colors" placeholder="••••••••">
                     </div>
-                    <div class="flex items-center gap-2">
-                        <input type="checkbox" id="remember" class="accent-gold">
-                        <label for="remember" class="text-sm text-silver/60">Keep me authenticated</label>
+                    <div class="flex items-center justify-between py-2">
+                        <label class="flex items-center gap-2 cursor-pointer group">
+                            <input type="checkbox" id="remember" class="accent-gold">
+                            <span class="text-xs text-silver/60 group-hover:text-silver transition-colors">Keep me authenticated</span>
+                        </label>
+                        <a href="#" class="text-xs text-gold hover:underline">Forgot Password?</a>
                     </div>
                     <button type="submit" onclick="window.location.href='index.html'; return false;" class="w-full bg-white text-charcoal py-4 rounded-lg font-bold hover:bg-gold transition-all">Login</button>
                     

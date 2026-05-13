@@ -44,7 +44,7 @@
                     </a>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8">
                     <a href="index.html" class="text-gold hover:text-white transition-colors">Home</a>
                     <a href="home2.html" class="text-silver hover:text-gold transition-colors">Home 2</a>
                     <a href="about.html" class="text-silver hover:text-gold transition-colors">About</a>
@@ -63,10 +63,10 @@
                     <a href="signup.html" class="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-white transition-all">Sign Up</a>
                 </div>
 
-                <div class="md:hidden">
-                    <button id="menu-btn" class="p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <div class="lg:hidden">
+                    <button id="menu-btn" class="p-2 text-silver hover:text-gold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
@@ -74,26 +74,29 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden flex-col bg-graphite/95 backdrop-blur-lg border-b border-white/10 md:hidden p-4 space-y-4">
-            <a href="index.html" class="text-gold py-2">Home</a>
-            <a href="home2.html" class="text-silver py-2">Home 2</a>
-            <a href="about.html" class="text-silver py-2">About</a>
-            <a href="services.html" class="text-silver py-2">Services</a>
-            <a href="case-studies.html" class="text-silver py-2">Case Studies</a>
-            <a href="contact.html" class="text-silver py-2">Contact</a>
-            <hr class="border-white/10">
-            <div class="flex items-center justify-between px-2">
-                <div class="flex gap-4">
-                    <button id="theme-toggle-mobile" class="w-9 h-9 flex items-center justify-center border border-white/10 rounded-lg hover:bg-white/5 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
-                    </button>
-                    <button id="rtl-toggle-mobile" class="h-9 px-3 text-[10px] font-bold border border-white/10 rounded-lg hover:bg-white/5 transition-colors uppercase tracking-widest">RTL</button>
-                </div>
+        <div id="mobile-menu" class="hidden flex-col bg-graphite/98 backdrop-blur-xl border-b border-white/10 lg:hidden p-8 space-y-8 absolute top-20 left-0 w-full shadow-2xl z-40">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-3xl font-bold text-gold hover:text-white transition-colors border-b border-white/5 pb-4">Home</a>
+                <a href="home2.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Home 2</a>
+                <a href="about.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">About</a>
+                <a href="services.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Services</a>
+                <a href="case-studies.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Case Studies</a>
+                <a href="contact.html" class="text-2xl font-semibold text-silver hover:text-gold transition-colors border-b border-white/5 pb-4">Contact</a>
             </div>
-            <div class="flex gap-4">
-                <a href="signup.html" class="flex-1 text-center py-2 bg-gold text-charcoal rounded-lg font-bold">Sign Up</a>
+            
+            <div class="pt-4">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-xs uppercase tracking-[0.2em] text-silver/40 font-bold">Preferences</span>
+                    <div class="flex gap-4">
+                        <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-xl hover:bg-white/5 transition-all active:scale-95" title="Toggle Theme">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                        <button id="rtl-toggle-mobile" class="h-12 px-6 text-xs font-bold border border-white/10 rounded-xl hover:bg-white/5 transition-all active:scale-95 uppercase tracking-widest">RTL</button>
+                    </div>
+                </div>
+                <a href="signup.html" class="block w-full text-center py-5 bg-gold text-charcoal rounded-xl font-bold text-xl hover:bg-white hover:shadow-xl hover:shadow-gold/20 transition-all active:scale-95">Get Started</a>
             </div>
         </div>
     </nav>
@@ -197,39 +200,38 @@
     <section class="section-padding bg-graphite/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
+                <div class="reveal text-center">
                     <h2 class="text-4xl font-bold mb-6">Chain-of-Thought <br><span class="text-emerald">Optimization Workflow</span></h2>
-                    <p class="text-silver/60 mb-8 leading-relaxed">Our proprietary workflow ensures that every prompt is tested against hundreds of variables before deployment.</p>
+                    <p class="text-silver/60 mb-8 leading-relaxed max-w-xl mx-auto">Our proprietary workflow ensures that every prompt is tested against hundreds of variables before deployment.</p>
                     
-                    <div class="space-y-6">
-                        <div class="flex gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors group">
-                            <div class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform">01</div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white">Problem Decomposition</h4>
-                                <p class="text-silver/40 text-sm">Breaking complex tasks into atomic logical steps for the LLM.</p>
-                            </div>
+                    <div class="space-y-16 flex flex-col items-center">
+                        <!-- Step 01 -->
+                        <div class="flex flex-col items-center text-center group max-w-md">
+                            <div class="text-gold font-bold text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">01</div>
+                            <h4 class="text-2xl font-bold text-white mb-4">Problem Decomposition</h4>
+                            <p class="text-silver/40 leading-relaxed">Breaking complex tasks into atomic logical steps for the LLM, ensuring a structured path to reasoning.</p>
                         </div>
-                        <div class="flex gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors group">
-                            <div class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform">02</div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white">Iterative Refinement</h4>
-                                <p class="text-silver/40 text-sm">A/B testing prompt variations to find the optimal temperature and top-p settings.</p>
-                            </div>
+                        
+                        <!-- Step 02 -->
+                        <div class="flex flex-col items-center text-center group max-w-md">
+                            <div class="text-gold font-bold text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">02</div>
+                            <h4 class="text-2xl font-bold text-white mb-4">Iterative Refinement</h4>
+                            <p class="text-silver/40 leading-relaxed">A/B testing prompt variations to find the optimal temperature and top-p settings for consistent output.</p>
                         </div>
-                        <div class="flex gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors group">
-                            <div class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform">03</div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white">Validation & Scaling</h4>
-                                <p class="text-silver/40 text-sm">Stress-testing the prompt across different models (GPT-4, Claude 3, Gemini Pro).</p>
-                            </div>
+                        
+                        <!-- Step 03 -->
+                        <div class="flex flex-col items-center text-center group max-w-md">
+                            <div class="text-gold font-bold text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">03</div>
+                            <h4 class="text-2xl font-bold text-white mb-4">Validation & Scaling</h4>
+                            <p class="text-silver/40 leading-relaxed">Stress-testing the prompt across different models like GPT-4, Claude 3, and Gemini Pro for cross-model stability.</p>
                         </div>
                     </div>
                 </div>
                 <div class="relative reveal">
                     <img src="assets/workflow.png" alt="AI Workflow" class="rounded-3xl shadow-2xl border border-white/10">
-                    <div class="absolute -bottom-6 -right-6 glass p-6 max-w-xs hidden md:block">
-                        <p class="text-gold font-bold mb-2">Real-time Analytics</p>
-                        <p class="text-xs text-silver/60">Response accuracy improved by 42% after CoT implementation.</p>
+                    <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 glass p-4 md:p-6 max-w-[180px] md:max-w-xs">
+                        <p class="text-gold font-bold mb-1 md:mb-2 text-sm md:text-base">Real-time Analytics</p>
+                        <p class="text-[10px] md:text-xs text-silver/60">Response accuracy improved by 42% after CoT implementation.</p>
                     </div>
                 </div>
             </div>
@@ -264,26 +266,26 @@
     <section class="section-padding relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="flex-1 reveal">
+                <div class="flex-1 reveal text-center">
                     <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Beyond Simple Prompts: <br><span class="text-gold">Agentic Swarms</span></h2>
                     <p class="text-lg text-silver/60 mb-8 leading-relaxed">
                         We don't just write instructions; we architect autonomous multi-agent systems. Our swarms decompose complex enterprise tasks into specialized sub-routines, ensuring higher accuracy and lower latency.
                     </p>
-                    <ul class="space-y-4 mb-10">
-                        <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-xs mt-1">✓</span>
-                            <span>Task Decomposition & Routing</span>
+                    <ul class="space-y-6 mb-12 inline-block text-left mx-auto">
+                        <li class="flex items-center gap-4 group">
+                            <span class="w-8 h-8 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-sm shrink-0 group-hover:bg-emerald group-hover:text-white transition-all duration-300">✓</span>
+                            <span class="text-lg text-silver/80">Task Decomposition & Routing</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-xs mt-1">✓</span>
-                            <span>Self-Correction & Reflection Loops</span>
+                        <li class="flex items-center gap-4 group">
+                            <span class="w-8 h-8 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-sm shrink-0 group-hover:bg-emerald group-hover:text-white transition-all duration-300">✓</span>
+                            <span class="text-lg text-silver/80">Self-Correction & Reflection Loops</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-xs mt-1">✓</span>
-                            <span>Cross-Model Collaboration Protocols</span>
+                        <li class="flex items-center gap-4 group">
+                            <span class="w-8 h-8 rounded-full bg-emerald/20 flex items-center justify-center text-emerald text-sm shrink-0 group-hover:bg-emerald group-hover:text-white transition-all duration-300">✓</span>
+                            <span class="text-lg text-silver/80">Cross-Model Collaboration Protocols</span>
                         </li>
                     </ul>
-                    <a href="services.html" class="text-gold font-bold flex items-center gap-2 group">
+                    <a href="services.html" class="text-gold font-bold flex items-center justify-center gap-2 group">
                         View Agentic Solutions
                         <span class="transform group-hover:translate-x-2 transition-transform">→</span>
                     </a>
@@ -294,10 +296,10 @@
                         <img src="assets/workflow.png" alt="Agent Workflow" class="w-full h-full object-cover rounded-2xl opacity-80 mix-blend-screen">
                     </div>
                     <!-- Decorative floating card -->
-                    <div class="absolute -bottom-10 -left-10 glass p-6 rounded-2xl border border-gold/20 animate-bounce-slow hidden md:block">
-                        <p class="text-[10px] uppercase tracking-widest text-gold mb-2 font-bold">System Latency</p>
-                        <div class="text-2xl font-bold">-140ms</div>
-                        <div class="text-[10px] text-emerald">+32% Speed boost</div>
+                    <div class="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-10 glass p-4 md:p-6 rounded-2xl border border-gold/20 animate-bounce-slow">
+                        <p class="text-[8px] md:text-[10px] uppercase tracking-widest text-gold mb-1 md:mb-2 font-bold">System Latency</p>
+                        <div class="text-xl md:text-2xl font-bold">-140ms</div>
+                        <div class="text-[8px] md:text-[10px] text-emerald">+32% Speed boost</div>
                     </div>
                 </div>
             </div>
@@ -308,7 +310,7 @@
     <section class="section-padding bg-graphite/20 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold mb-16">The Science of <span class="text-gradient">Optimization</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="glass p-10 hover:border-gold/30 transition-all reveal">
                     <div class="text-xs text-gold font-bold uppercase tracking-[0.2em] mb-6">Phase 01</div>
                     <h4 class="text-xl font-bold mb-4">Semantic Drift Analysis</h4>
@@ -368,14 +370,14 @@
         <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald/5 rounded-full blur-[100px]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center">
                 <!-- Brand Info -->
-                <div class="space-y-6">
+                <div class="space-y-6 flex flex-col items-center">
                     <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
                         <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center border border-white/10">
                             <span class="text-gold font-bold text-xl">N</span>
                         </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">NP<span class="text-gold">Lab</span></span>
+                        <span class="text-2xl font-bold tracking-tight text-white">NP <span class="text-gold">Lab</span></span>
                     </a>
                     <p class="text-silver/40 text-sm leading-relaxed max-w-xs">
                         Architecting the next generation of enterprise intelligence through scientific prompt engineering and multi-agent systems.
@@ -422,10 +424,10 @@
                 </div>
 
                 <!-- Protocol Newsletter -->
-                <div>
+                <div class="flex flex-col items-center">
                     <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Protocol Updates</h4>
                     <p class="text-silver/40 text-xs mb-6">Receive monthly updates on latent space research and optimization techniques.</p>
-                    <form class="space-y-3">
+                    <form class="space-y-3 w-full">
                         <input type="email" placeholder="agent@enterprise.ai" class="w-full bg-graphite border border-white/10 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-gold/50 transition-colors">
                         <button class="w-full bg-gold text-charcoal py-3 rounded-lg font-bold hover:bg-white transition-all text-sm">Join the Protocol</button>
                     </form>
